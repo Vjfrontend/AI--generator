@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+ box-sizing: border-box;
+ font-family: 'Courier New', Courier, monospace;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #0f0f0f;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000; /* Ensure the navbar stays on top of other elements */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #080808;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ddd;
+}
+
+/* Add padding to the body to avoid content being hidden behind the fixed navbar */
+body {
+    padding-top: 50px; /* Adjust as needed based on your navbar height */
+}
+/* nav {
+    background-color: #fff;
+    color: #272525;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #111010;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ddd;
+} */
+.img-generator{
+    height: 40vh;
+    background:url(1.jpg);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+ /* .img-generator::before{
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: #121212;  */
+/* } */
+.img-generator.content{
+    color:#fff;
+    padding: 0 15px;
+    max-width: 760;
+    text-align: center;
+    position: relative;
+}
+.img-generator h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+
+}
+.img-generator p{
+    font-size: 1.35rem;
+    margin-top:10px;
+    color: #fff;
+}
+.img-generator .generate-form{
+    height: 56px;
+    width: 100%;
+    display: flex;
+    padding: 6px;
+    margin: 45px 0 15px;
+    align-items: center;
+    justify-content: space-between;
+    background: #f0e9e9;
+    border-radius: 30px;
+}
+.img-generator .prompt-input{
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0 17px;
+    
+} 
+.generate-form .controls{
+    display: flex;
+    height: 100%;
+    gap:15px;
+}
+
+.generate-form #image-quantity{
+    outline: none;
+    border:none;
+    background: none;
+    font-size: 1rem;
+}
+.generate-form .generate-btn{
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight:500 ;
+    padding: 0 25px;
+    cursor: pointer;
+    border-radius: 30px;
+    background: blue;
+}
+.img-gallery {
+    display: flex;
+    gap: 15px;
+    padding: 0 15px;
+    max-width: 1250px;
+     margin: 50px auto; 
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+}
+
+
+.img-gallery .img-card{
+    width: 285px;
+     aspect-ratio: 1 / 1; 
+     border-radius: 7px;
+     overflow: hidden;
+     position: relative;
+     
+
+}
+.img-gallery .img-card img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.img-gallery .img-card .download-btn{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #fff;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.img-gallery .img-card:hover .download-btn{
+    display:flex;
+}
+.img-gallery .img-card .download-btn img {
+    width: 14px;
+    height: 14px;
+
+}@media  screen and (max-width: 550px){
+    .img-generator h1{
+        font-size: 1.8rem;
+    }
+    .img-generator p{
+        font-size: 1rem;
+    }
+    .img-generator .generate-form{
+        margin-top: 30px;
+        height: 52px;
+        display: block;
+
+    }
+    .generate-form .controls{
+        height:40px;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: flex-end;
+
+    }
+    .generate-form  #image-quantity{
+        color: #fdfbfb;
+
+    }
+    .generate-form #image-quantity option{
+        color: black;
+    }
+    .generate-form .generate-btn{
+        height: 100%;
+    }
+    .img-gallery{
+        margin-top: 20px;
+
+    }
+    
+}
+
+@media  screen and (max-width: 550px){
+    .img-gallery .img-card{
+        width: 100%;
+         
+
+}
+}
+    
+
+
+
